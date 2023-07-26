@@ -16,7 +16,7 @@ def home():
 def predict_api():
     data=request.json['data']
     print(data)
-    print(np.array(list(data.values())).reshape(1,-1)
+    print(np.array(list(data.values())).reshape(1,-1))
     output=rscv.predict(data)
     print(output[0])
     return jsonify(output[0])
